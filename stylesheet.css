@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat;
+}
+
+body{
+    height: 100%;
+    width: auto;
+    margin: 5vh;
+    overflow: hidden;
+}
+
+
+#indexbod{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#indexbod div{
+    height: 100%;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+#indexbod div input{
+    padding: 1vh;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+#indexbod div select{
+    padding: 1vh;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pic{
+ display: flex;
+
+}
+
+.pic img{
+    height: 70vh;
+    width: auto;
+    border-radius: 50px;
+
+
+}
+.content{
+    margin-left: 10vh;
+    margin-bottom: 10vh;
+    margin-right: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content h1{
+font-size: 22pt;
+    align-items: center;
+}
+.content p{
+    font-size: 10pt;
+    padding-top: 2vh;
+    text-align: center;
+
+
+}
+#login{
+    margin-top: 10%;
+    height: 100%;
+}
+
+.content button{
+    margin-top: 5vh;
+    padding: 1vh 5vh;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #DAD1FF;
+
+}
