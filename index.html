@@ -11,28 +11,31 @@
     
 </header>
 <main id="indexbod">
-    <section class="switch content">
+    <section id="switchcontent">
         <h1>Welcome Back</h1>
         <p>Please fill in your login information</p>
         <div id="login">
-        <input type="email" placeholder="E-Mail" >
-            <input type="password" placeholder="Password">
+
+            <input  type="text" placeholder="Username" name="username" required>
 
 
-            <select name="class" id="class">
-                <label for="class">Class</label>
-                <option value="ME21a">ME21a</option>
-                <option value="ME21b">ME21b</option>
-                <option value="ME21c">ME21c</option>
-                <option value="ME21d">ME21d</option>
-            </select>
+            <input id="password" type="password" placeholder="Enter Password" name="password" required>
+
+        <select name="class" id="class">
+            <label for="class">Class</label>
+            <option value="ME21a">ME21a</option>
+            <option value="ME21b">ME21b</option>
+            <option value="ME21c">ME21c</option>
+            <option value="ME21d">ME21d</option>
+        </select>
         </div>
-       <a href="lend.html"> <button>Login</button></a>
+
+        <a href="lend.html"><button id="submit" type="submit">Login</button></a>
         <p><a href="signup.html">Sign up</a> if you don't have an <br>
             account yet</p>
     </section>
-    <section class="switch pic">
- <img src="img/7814530.jpg">
+    <section id="switchpic">
+
 
     </section>
 </main>
