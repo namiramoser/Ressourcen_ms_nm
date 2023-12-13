@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lend</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="js.js"></script>
+</head>
+<body>
+<header>
+<nav class="navigation">
+    <a href="overview.html"> My Profil</a>
+    <a href="profil.html"> Overview</a>
+
+</nav>
+</header>
+<main id="indexbod">
+    <section id="switchpic"></section>
+    <section id="lendinfo">
+        <h1>What do you want to lend out?</h1>
+
+        <label for="category">Category</label>
+        <select name="Category" id="category" onchange="showProducts()">
+            <option value="Sport">Sport</option>
+            <option value="Video">Video</option>
+            <option value="Computer">Computer</option>
+            <option value="Photography">Photography</option>
+        </select>
+
+        <div id="productContainers">
+            <div id="categorysport" class="productContainer" style="display: none;">
+                <label for="categorysport">Products Sport</label>
+                <select name="CategorySport" id="productSport">
+                    <option value="Trampolin">Trampolin</option>
+                    <option value="Ball">Ball</option>
+                    <option value="Mats">Mats</option>
+                    <option value="Basketball">Basketball</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+
+            <div id="categoryvideo" class="productContainer" style="display: none;">
+                <label for="categoryvideo">Products Video</label>
+                <select name="CategoryVideo" id="productVideo">
+                    <option value="Videocam">Videocam</option>
+                    <option value="Stabilizer">Stabilizer</option>
+                    <option value="Lens1">Lens1</option>
+                    <option value="Lens2">Lens2</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+
+            <div id="categorycomputer" class="productContainer" style="display: none;">
+                <label for="categorycomputer">Products Computer</label>
+                <select name="CategoryComputer" id="productComputer">
+                    <option value="SSD">SSD</option>
+                    <option value="Cable">Cable</option>
+                    <option value="Screen">Screen</option>
+                    <option value="Adapter">Adapter</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+
+            <div id="categoryphotography" class="productContainer" style="display: none;">
+                <label for="categoryphotography">Products Photography</label>
+                <select name="CategoryPhotography" id="productPhotography">
+                    <option value="Light1">Light1</option>
+                    <option value="Light2">Light2</option>
+                    <option value="Stativ">Stativ</option>
+                    <option value="Filter">Filter</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+        </div>
+
+        <input id="itemcount" type="number" placeholder="Quantity" name="quantity" required>
+    </section>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

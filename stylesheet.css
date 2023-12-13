@@ -86,10 +86,7 @@ font-size: 22pt;
 
 
 }
-#login{
-    margin-top: 10%;
-    height: 100%;
-}
+
 
 #switchcontent button{
     margin-top: 5vh;
@@ -144,3 +141,26 @@ font-size: 22pt;
     background-color: #DAD1FF;
 
 }
+
+/* Lend site */
+
+.navigation{
+    display: flex;
+    flex-direction: row ;
+    justify-content: flex-end;
+    margin-right: 5vh;
+
+
+}
+.navigation a{
+    text-decoration: none;
+    padding: 2vh;
+    color: black;
+}
+.navigation a:hover{
+}
+#lendinfo{
+    margin: 15vh;
+}
+
+
