@@ -20,18 +20,19 @@
     <section id="lendinfo">
         <h1>What do you want to lend out?</h1>
 
-        <label for="category">Category</label>
+       <div> <label for="category">Category</label>
         <select name="Category" id="category" onchange="showProducts()">
             <option value="Sport">Sport</option>
             <option value="Video">Video</option>
             <option value="Computer">Computer</option>
             <option value="Photography">Photography</option>
         </select>
-
+       </div>
         <div id="productContainers">
             <div id="categorysport" class="productContainer" style="display: none;">
-                <label for="categorysport">Products Sport</label>
+                <label class="prodcat" for="categorysport">Products Sport</label>
                 <select name="CategorySport" id="productSport">
+                    <option value="Invalid" disabled selected>Please select a category</option>
                     <option value="Trampolin">Trampolin</option>
                     <option value="Ball">Ball</option>
                     <option value="Mats">Mats</option>
@@ -41,8 +42,9 @@
             </div>
 
             <div id="categoryvideo" class="productContainer" style="display: none;">
-                <label for="categoryvideo">Products Video</label>
+                <label class="prodcat" for="categoryvideo">Products Video</label>
                 <select name="CategoryVideo" id="productVideo">
+                    <option value="Invalid" disabled selected>Please select a product</option>
                     <option value="Videocam">Videocam</option>
                     <option value="Stabilizer">Stabilizer</option>
                     <option value="Lens1">Lens1</option>
@@ -52,8 +54,9 @@
             </div>
 
             <div id="categorycomputer" class="productContainer" style="display: none;">
-                <label for="categorycomputer">Products Computer</label>
+                <label class="prodcat" for="categorycomputer">Products Computer</label>
                 <select name="CategoryComputer" id="productComputer">
+                    <option value="Invalid" disabled selected>Please select a product</option>
                     <option value="SSD">SSD</option>
                     <option value="Cable">Cable</option>
                     <option value="Screen">Screen</option>
@@ -63,8 +66,9 @@
             </div>
 
             <div id="categoryphotography" class="productContainer" style="display: none;">
-                <label for="categoryphotography">Products Photography</label>
+                <label class="prodcat" for="categoryphotography">Products Photography</label>
                 <select name="CategoryPhotography" id="productPhotography">
+                    <option value="Invalid" disabled selected>Please select a product</option>
                     <option value="Light1">Light1</option>
                     <option value="Light2">Light2</option>
                     <option value="Stativ">Stativ</option>
@@ -72,9 +76,28 @@
                     <option value="None">None</option>
                 </select>
             </div>
-        </div>
 
-        <input id="itemcount" type="number" placeholder="Quantity" name="quantity" required>
+            <div>
+                <label for="start-date">Start Date</label>
+                <input type="date" id="start-date" name="start-date">
+            </div>
+
+            <div>
+                <label for="end-date">End Date</label>
+                <input type="date" id="end-date" name="end-date">
+            </div>
+
+        </div>
+     <div>   <input id="itemcount" type="number" placeholder="Quantity" name="quantity" required oninput="validateForm()"></div>
+        <div>
+            <input type="checkbox" id="agreeTerms" required>
+            <label for="agreeTerms">I agree to the terms of usage</label>
+        </div>
+        <button id="submit" type="button" onclick="validateAndShowConfirmation()">Lend Out</button>
+
+
+        <p id="notification" style="color: red;"></p>
+
     </section>
 </main>
 <footer>

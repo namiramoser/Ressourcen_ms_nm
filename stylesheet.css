@@ -21,7 +21,7 @@ body{
 }
 #indexbod div{
     height: 100%;
-    width: 220px;
+
     display: flex;
     flex-direction: column;
 
@@ -160,7 +160,32 @@ font-size: 22pt;
 .navigation a:hover{
 }
 #lendinfo{
-    margin: 15vh;
+    margin: 30vh;
+}
+#lendinfo h1{
+
+    font-size: 40px;
+    padding-bottom: 5vh;
 }
 
+#lendinfo label{
+font-weight: bolder;
+    font-size: 20px;
+    padding-right: 10vh;
 
+}
+#lendinfo .prodcat{
+    font-weight: normal;
+    padding-top: 5vh;
+font-size: 16px;
+
+
+}
+
+#lendinfo button{
+    margin-top: 5vh;
+    padding: 1vh 5vh;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #DAD1FF;
+}
