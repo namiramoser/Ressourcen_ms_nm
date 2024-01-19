@@ -2,95 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lend</title>
+    <title>Profile and Reservations</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="js.js"></script>
 </head>
 <body>
 <header>
     <nav class="navigation">
-        <a href="overview.html"> My Profil</a>
-        <a href="profil.html"> Overview</a>
+        <a href="#profileSection">My Profile</a>
+        <a href="#reservationsSection">Reservations</a>
+        <a href="#lendSection">Create New</a>
     </nav>
 </header>
-<main id="indexbod">
-    <section id="switchpic"></section>
-    <section id="lendinfo">
-        <h1>What do you want to lend out?</h1>
 
-        <form id="lendForm" action="signup2.html" method="post">
-            <div>
-                <label for="category">Category</label>
-                <select name="Category" id="category" onchange="showProducts()">
-                    <option value="Invalid" disabled selected>Please select a category</option>
-                    <option value="Sport">Sport</option>
-                    <option value="Video">Video</option>
-                    <option value="Computer">Computer</option>
-                    <option value="Photography">Photography</option>
-                </select>
-            </div>
+<main>
+    <section id="profileSection">
+        <h2>Profile Details</h2>
 
-            <div id="productContainers">
-                <div id="categorysport" class="productContainer" style="display: none;">
-                    <label class="prodcat" for="categorysport">Products Sport</label>
-                    <select name="CategorySport" id="productSport">
-                        <option value="Invalid" disabled selected>Please select a product</option>
-                        <option value="Trampolin">Trampolin</option>
-                        <option value="Ball">Ball</option>
-                        <option value="Mats">Mats</option>
-                        <option value="Basketball">Basketball</option>
-                        <option value="None">None</option>
-                    </select>
-                </div>
-
-                <!-- Add similar blocks for other categories -->
-            </div>
-
-            <div>
-                <input id="itemcount" type="number" placeholder="Quantity" name="quantity" required>
-            </div>
-
-            <button id="submit" type="button" onclick="validateForm()">Lend Out</button>
-            <p id="notification" style="color: red;"></p>
+        <form id="editForm" style="display: none">
+            <!-- ... (Profile Edit Form) ... -->
+            <button type="button" onclick="saveChanges()">Save Changes</button>
         </form>
+
+        <div id="displayDetails">
+            <!-- ... (Profile Display) ... -->
+        </div>
+
+        <button class="profil" onclick="editProfile()">Edit Profile</button>
+    </section>
+
+    <section id="reservationsSection">
+        <h2>My Reservations</h2>
+
+        <div id="reservation1">
+            <!-- ... (Existing Reservation) ... -->
+            <button class="editReservation" data-reservation-id="1" onclick="editReservation(1)">Edit</button>
+            <button class="deleteReservation" data-reservation-id="1" onclick="deleteReservation(1)">Delete</button>
+
+            <form class="edit-form" style="display: none;">
+                <!-- ... (Edit Form for Existing Reservation) ... -->
+                <button type="button" onclick="saveChanges(1)">Save Changes</button>
+            </form>
+        </div>
+
+        <!-- ... (Other Existing Reservations) ... -->
+
+        <!-- New Reservations Container -->
+        <div id="newReservationsContainer"></div>
+    </section>
+
+    <section id="lendSection">
+        <h2>Create New Reservation</h2>
+
+        <!-- ... (Lend Form) ... -->
+
+        <button id="submit" type="button" onclick="validateAndShowConfirmation()">Create Reservation</button>
+
+        <p id="notification" style="color: red;"></p>
     </section>
 </main>
-<footer></footer>
 
-<script>
-    function showProducts() {
-        const selectedCategory = document.getElementById('category').value;
-        const productContainers = document.querySelectorAll('.productContainer');
-
-        productContainers.forEach(container => {
-            container.style.display = 'none';
-        });
-
-        const selectedContainer = document.getElementById(`category${selectedCategory.toLowerCase()}`);
-        if (selectedContainer) {
-            selectedContainer.style.display = 'block';
-        }
-    }
-
-    function validateForm() {
-        const category = document.getElementById('category').value;
-        const product = document.getElementById(`product${category}`).value;
-        const quantity = document.getElementById('itemcount').value;
-
-        const notification = document.getElementById('notification');
-        const submitButton = document.getElementById('submit');
-
-        if (category === 'Invalid' || product === 'Invalid' || quantity === '') {
-            notification.textContent = 'Please fill in necessary information.';
-            submitButton.disabled = true;
-        } else {
-            notification.textContent = '';
-            submitButton.disabled = false;
-            // Uncomment the next line if you want to submit the form
-            // document.getElementById('lendForm').submit();
-        }
-    }
-</script>
+<footer>
+    <!-- ... (Footer Content) ... -->
+</footer>
 </body>
 </html>

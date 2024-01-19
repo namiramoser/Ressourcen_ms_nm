@@ -2,9 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Profile</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="js.js"></script>
 </head>
 <body>
+<header>
+    <nav class="navigation">
+        <a href="overview.html"> My Profil</a>
+        <a href="lend.html"> Create New</a>
+        <a href="index.html"> Abmelden</a>
+
+    </nav>
+</header>
+
+<main id="overviewmain">
+
+
+
+
+    <article>
+   <section>
+       <h2>Profile Details</h2>
+
+       <form id="editForm" style="display: none">
+           <table>
+               <tr>
+                   <td><b>Name :</b></td>
+                   <td><input type="text" id="editName"></td>
+               </tr>
+               <tr>
+                   <td><b>Age :</b></td>
+                   <td><input type="text" id="editAge"></td>
+               </tr>
+               <tr>
+                   <td><b>Gender :</b></td>
+                   <td><input type="text" id="editGender"></td>
+               </tr>
+               <tr>
+                   <td><b>Email :</b></td>
+                   <td><input type="text" id="editEmail"></td>
+               </tr>
+               <tr>
+                   <td><b>Address :</b></td>
+                   <td><input type="text" id="editAddress"></td>
+               </tr>
+               <tr>
+                   <td><b>Class :</b></td>
+                   <td><input type="text" id="editClass"></td>
+               </tr>
+               <tr>
+                   <td><b>Reservations :</b></td>
+                   <td><input type="text" id="editReservations"></td>
+               </tr>
+               <tr>
+                   <td><b>Geburtstag :</b></td>
+                   <td><input type="text" id="editGeburtstag"></td>
+               </tr>
+               <tr>
+                   <td><b>Password :</b></td>
+                   <td><input type="password" id="editPassword"></td>
+               </tr>
+           </table>
+           <button type="button" onclick="saveChanges()">Speichern</button>
+       </form>
+
+       <div id="displayDetails">
+           <table>
+               <tr>
+                   <td><b>Name :</b></td>
+                   <td id="displayName">Namira Moser</td>
+               </tr>
+               <tr>
+                   <td><b>Age :</b></td>
+                   <td id="displayAge">35</td>
+               </tr>
+               <tr>
+                   <td><b>Gender :</b></td>
+                   <td id="displayGender">female</td>
+               </tr>
+               <tr>
+                   <td><b>Email :</b></td>
+                   <td id="displayEmail">namira@moser.com</td>
+               </tr>
+               <tr>
+                   <td><b>Address :</b></td>
+                   <td id="displayAddress">Holunderstrasse 3, 8009</td>
+               </tr>
+               <tr>
+                   <td><b>Class :</b></td>
+                   <td id="displayClass">ME21b</td>
+               </tr>
+               <tr>
+                   <td><b>Reservations :</b></td>
+                   <td id="displayReservations">0</td>
+               </tr>
+               <tr>
+                   <td><b>Geburtstag :</b></td>
+                   <td id="displayGeburtstag">23.07.2004</td>
+               </tr>
+               <tr>
+                   <td><b>Password :</b></td>
+                   <td id="displayPassword">........</td>
+               </tr>
+           </table>
+       </div>
+
+       <button class="profil" onclick="editProfile()">Profil bearbeiten</button>
+   </section>
+
+<section>
+    <div class="reservation" id="reservation1">
+        <h2>Meine Reservationen</h2>
+        <button class="accordion" onclick="togglePanel(1)">1x Camera : 12.01-15.01.24</button>
+        <div class="panel" id="panel1">
+            <p>Ausgelehnt: Kamera <br>
+                Datum: 12.01.2023 - 15.01.2023 <br>
+                Anzahl: 1 <br>
+                Schüler: Schüler 1
+            </p>
+            <button class="editReservation" data-reservation-id="1" onclick="editReservation(1)">Bearbeiten</button>
+            <button class="deleteReservation" data-reservation-id="1" onclick="deleteReservation(1)">Löschen</button>
+
+            <!-- Bearbeitungsformular -->
+            <form class="edit-form" style="display: none;">
+                <label for="newDate">Neues Datum:</label>
+                <input type="text" id="newDate" name="newDate">
+
+                <label for="newQuantity">Neue Anzahl:</label>
+                <input type="text" id="newQuantity" name="newQuantity">
+
+                <button type="button" onclick="saveChanges(1)">Speichern</button>
+            </form>
+
+        </div>
+
+    </div>
+    <a href="lend.html"><button class="profil" type="submit">Create New</button></a>
+
+
+</section>
+        <div id="newReservationsContainer"></div>
+    </article>
+</main>
 
 </body>
 </html>
+<script src="js.js"></script>
+

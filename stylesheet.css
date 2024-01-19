@@ -17,8 +17,16 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
+
+@media screen and (max-width: 800px) {
+    #indexbod{
+margin-top: 15vh;
+        margin-bottom: 10vh;
+        flex-direction: column;
+
+    }}
 #indexbod div{
     height: 100%;
 
@@ -53,36 +61,62 @@ body{
 /*----------------------------------*/
 /* Login site */
 #switchpic{
-    background-image: url("img/7814530.jpg");
-    width: 120vh;
+
+    width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #DAD1FF;
     align-items: center;
+    justify-content: center;
 
 }
 
+@media screen and (max-width: 800px) {
+    #switchpic{
 
+     display: none;
+
+    }}
+#switchpic img{
+  margin-top: 10vh;
+    width: 100%;
+}
+@media screen and (max-width: 800px) {
+    #switchpic img{
+
+        display: none;
+
+    }}
 #switchcontent{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    width: 50vh;
+    margin-left: 18vh;
+    margin-right: 18vh;
 
 
 }
+@media screen and (max-width: 800px) {
+    #switchcontent{
+
+        margin-left: 5vh;
+        margin-right: 5vh;
+
+    }}
 
 #switchcontent h1{
 font-size: 22pt;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 #switchcontent p{
     font-size: 10pt;
     padding-top: 2vh;
-    text-align: center;
+
 
 
 }
@@ -111,8 +145,9 @@ font-size: 22pt;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 18vh;
+    margin-right: 18vh;
+    width: 50vh;
 
 
 }
@@ -120,6 +155,7 @@ font-size: 22pt;
 #switchcontentSU h1{
     font-size: 22pt;
     align-items: center;
+    text-align: center;
 }
 #switchcontentSU p{
     font-size: 10pt;
@@ -149,7 +185,7 @@ font-size: 22pt;
     flex-direction: row ;
     justify-content: flex-end;
     margin-right: 5vh;
-
+border-bottom: 1pt solid #DAD1FF;
 
 }
 .navigation a{
@@ -160,8 +196,16 @@ font-size: 22pt;
 .navigation a:hover{
 }
 #lendinfo{
-    margin: 30vh;
+    margin-left: 25vh;
+    margin-right: 25vh;
 }
+@media screen and (max-width: 800px) {
+    #lendinfo{
+
+        margin-left: 5vh;
+        margin-right: 5vh;
+
+    }}
 #lendinfo h1{
 
     font-size: 40px;
@@ -189,3 +233,120 @@ font-size: 16px;
     border-style: none;
     background-color: #DAD1FF;
 }
+
+/* Profile card */
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#overviewmain article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+@media screen and (max-width: 900px) {
+    #overviewmain article{
+
+        flex-direction: column;
+
+    }}
+
+#overviewmain h2{
+font-size: 32pt;
+margin-bottom: 5vh;
+
+
+}
+#overviewmain{
+
+    margin-top: 25vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+
+}
+@media screen and (max-width: 800px) {
+    #overviewmain{
+
+        margin-top: 10vh;
+margin-bottom: 10vh;
+
+    }}
+
+@media screen and (max-width: 800px) {
+    .reservation{
+        margin-top: 5vh;
+
+    }}
+
+#overviewmain td{
+    padding-bottom: 1vh;
+}
+
+ .profil{
+    margin-top: 5vh;
+    padding: 1vh 5vh;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #DAD1FF;
+}
+
+ .accordion{
+     margin-top: 5vh;
+     padding: 1vh 5vh;
+     border-radius: 20px;
+     border-style: none;
+     background-color: #f6f3ff;
+ }
+
+ .reservation button{
+     margin-top: 2vh;
+     padding: 1vh 5vh;
+     border-radius: 20px;
+     border-style: none;
+     background-color: #f6f3ff;
+ }
+
+ .reservation p{
+     font-size: 10pt;
+     padding-top: 1vh;
+ }
+
